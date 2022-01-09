@@ -1,0 +1,21 @@
+body{
+    background-color: rgb(220, 160, 255);
+}
+h2{
+    font-size: 50px;
+    color: white;
+}
+.container{
+    margin-left: 500px ;
+}
+#btn{
+    padding: 10px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(79, 17, 104);
+    margin-left: 20px;
+}
+#demo{
+    font-size: 20px;
+    font-weight: bold;
+    margin-left: 20px;
+}

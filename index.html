@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
+<body>
+<div class="container">
+    
+<h2>FizzBuzz</h2>
+
+<p id="demo">FizzBuzz Demo</p>
+
+<button id="btn" type="button" onclick="fizzBuzzDemo()">Start </button>
+
+</div>
+
+
+<script>
+
+function fizzBuzzDemo() {
+
+// FizzBuzz 
+// by Master Hun
+// Not the best solution
+
+// Now FizzBuzz the function()
+// Instead of the whole program
+// fizzBuzz returns the number num
+// if it is not divisible by 3 or 5.
+// fizzBuzz returns "Fizz" if num is
+// divisible by 3.
+// fizzBuzz returns "Buzz" if num is
+// divisible by 5.
+// fizzBuzz returns "FizzBuzz" if num is
+// divisible by 3 & 5.
+
+
+function fizzBuzz(num) {
+  
+  // fizzBuzzState = 0 = neither fizz nor buzz
+  // fizzBuzzState = 1 = fizz only
+  // fizzBuzzState = 2 = buzz only
+  // fizzBuzzState = 3 = fizzbuzz 
+  
+  let fizzBuzzState = 0;
+  
+  if ( (  num % 3  == 0 ) && ( num != 0 ) ) 
+    fizzBuzzState = 1;
+  
+  if ( ( num % 5  == 0 ) && ( num != 0 ) ) 
+    fizzBuzzState = 2;
+  
+  if ( ( num % 3 == 0 ) && ( num % 5 == 0 ) )
+    fizzBuzzState = 3;
+  
+  if ( fizzBuzzState == 0 )
+    return num;
+
+  if ( fizzBuzzState == 1 )
+    return "[ " + num + " ]" + " Fizz";
+  
+  if ( fizzBuzzState == 2 )
+    return "[ " + num + " ]" + " Buzz";
+    
+  if ( fizzBuzzState == 3 )
+    return "[ " + num + " ]" + " FizzBuzz"; 
+
+}
+
+
+for ( let i = 1; i <= 100; i++ ) {
+  
+  if ( confirm( fizzBuzz(i) ) == true )
+    continue;
+  else 
+    break;
+  
+}
+
+}
+</script>
+
+</body>
+</html> 
